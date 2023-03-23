@@ -81,6 +81,10 @@ Transcoding lcevc \
 
 `ffmpeg -re -fflags +genpts -stream_loop -1 -i <input file>.mp4 -c:v copy -c:a copy -bufsize 2000k -f flv "rtmp://rtmp.us-east-1.v-nova.com/v-nova/Twitch"`
 
+## Creating multi track .mp4 files
+
+` ffmpeg -i ..\RDSH2test264.mp4 -i ..\RDSH2test265.mp4 -map 0 -map 1 -codec copy ..\MultiTrack.mp4`
+
 ## Peforming metric evaluation
 
 ### PSNR
